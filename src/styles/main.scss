@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Definición de variables
+$letra-principal: "Poppins", sans-serif;
+$letra-bebas-neue: "Bebas Neue", sans-serif;
+
+html{
+    body{
+        background-color: hsl(0, 0%, 94%);
+        #root{
+            .content{
+               width: 100%;
+               margin: 0 auto;
+               margin-top: 20vh;
+
+                .calculator-content{
+                    width: 40%;
+                    margin: 0 auto;
+                    padding: 30px;
+                    background-color: white;
+                    border-radius: 15px;
+                    border-bottom-right-radius: 25%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+
+                    .groups-inputs{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 24px;
+                        width: 100%;
+
+                        .inputs{
+                            .text{
+                                font-size:small;
+                                font-family: $letra-principal;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                            }
+                            
+                        }
+                    }
+                    .buttonContent{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        
+                        .line{
+                            flex: 1;
+                            height: 1px;
+                            background-color: #ccc;
+                        }
+                        .CalculateButton{
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            background-color: hsl(259, 100%, 65%);
+                            border: 1px solid white;
+
+                            &:hover{
+                                background-color: black;
+                                cursor: pointer;
+                            }
+                        }
+                        .line2{
+                            display: none;
+                        }
+                    }
+                    
+                    .results{                        
+                        .results-content{
+                            font-weight: 800;
+                            font-style: italic;
+                            font-family: $letra-principal;
+
+                            .results-text{
+                                font-family: $letra-principal;
+                                font-weight: 800;
+                                color: hsl(259, 100%, 65%);
+                            }
+                            .error-text{
+                                font-family: $letra-principal;
+                                font-weight: 800;
+                                color: hsl(259, 100%, 65%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+  html{
+    body{
+        #root{
+            .content{
+                .calculator-content{
+                    width: 80%;
+
+                    .buttonContent{
+                        .line{
+                            flex: 1;
+                            height: 1px;
+                            background-color: #ccc;
+                        }
+                       
+                        .line2{
+                            display: block;
+                            flex: 1;
+                            height: 1px;
+                            background-color: #ccc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+}
