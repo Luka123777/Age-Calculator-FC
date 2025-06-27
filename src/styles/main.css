@@ -1,2 +1,90 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html body {
+  background-color: hsl(0, 0%, 94%);
+}
+html body #root .content {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20vh;
+}
+html body #root .content .calculator-content {
+  width: 40%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  border-bottom-right-radius: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+html body #root .content .calculator-content .groups-inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+}
+html body #root .content .calculator-content .groups-inputs .inputs .text {
+  font-size: small;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+html body #root .content .calculator-content .buttonContent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+html body #root .content .calculator-content .buttonContent .line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+html body #root .content .calculator-content .buttonContent .CalculateButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  border: 1px solid white;
+}
+html body #root .content .calculator-content .buttonContent .CalculateButton:hover {
+  background-color: black;
+  cursor: pointer;
+}
+html body #root .content .calculator-content .buttonContent .line2 {
+  display: none;
+}
+html body #root .content .calculator-content .results .results-content {
+  font-weight: 800;
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
+}
+html body #root .content .calculator-content .results .results-content .results-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: hsl(259, 100%, 65%);
+}
+html body #root .content .calculator-content .results .results-content .error-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: hsl(259, 100%, 65%);
+}
+
+@media (max-width: 991px) {
+  html body #root .content .calculator-content {
+    width: 80%;
+  }
+  html body #root .content .calculator-content .buttonContent .line {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+  }
+  html body #root .content .calculator-content .buttonContent .line2 {
+    display: block;
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+  }
+}/*# sourceMappingURL=main.css.map */
